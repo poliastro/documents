@@ -51,9 +51,6 @@ the software:
 * Include more gravitational and atmospheric ones.
 * Documentation usage on `EarthSatellite` and tutorials on its usage.
 
-**This proposal would lead to feasible amount of work during the program. It might
-open new development branches within the project and attract more users.**
-
 
 Validation and testing
 ----------------------
