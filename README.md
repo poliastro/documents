@@ -118,5 +118,5 @@ Timeline for the projects
 
 If some of previous proposals is finally accepted, it will be announced 27th,
 November. Because estimated time for all projects is 4 months, the NumFOCUS
-program can be concatenated with the GSOC'21 edition, which ensures a continues
-activity and development inside the poliastro community.
+program can be concatenated with the beginning of GSOC'21 edition, which ensures
+a continues activity and development inside the poliastro community.
