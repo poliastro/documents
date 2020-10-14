@@ -92,7 +92,7 @@ Different tasks to solve and goals to achieve are listed in the following lines:
 * Increase coverage by adding unitary tests to untested conditional
   sections in the code.
 
-* Build and Okerkit based testing suite.
+* Build an Okerkit based testing suite.
 
 * Generate STK wrapper or validation API.
 
