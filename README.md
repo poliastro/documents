@@ -49,7 +49,7 @@ planetary reference frames...
 Previous problem can be solved by designing and building a validation framework
 against similar software. This testing environment can lead to an increase
 of numerical accuracy while adding a complete new set of unitary tests for heavy
-astrodynamics routines.
+astrodynamic routines.
  
 Among similar software candidates, we find: GMAT, Orekit and AGI-STK. All of
 them can be used through script files and provide custom API interfaces for
@@ -59,9 +59,14 @@ addition, all of them are free to use and OS-independent except for STK, which
 requires from a Windows based system.
 
 This new validation framework would not be included within actual software but
-in the validation repository of poliastro organization. Different scripts,
-wrapping functions and output results would be placed in this repository, so
-developers can test obtained results validity.
+in the validation repository of poliastro organization. Nevertheless, some
+results obtained by coded and executed scripts from previously mentioned
+software will be implemented directly into poliastro.
+
+Not only that, by generating a custom testing framework, more complex routines
+could be implemented in a faster and reliable way such us Earth focused
+capabilities, restricted three-body problem, relative motion, halo-orbits,
+low-thrust maneuvers and more!
 
 
 7 - Benefit to project and community
@@ -115,12 +120,21 @@ of:
 
 * Once the framework has been theoretically defined, the rest of first month is
   devoted to the validation and testing of 3D maneuvers. By starting with this
-  simple task, developers can get used to working with new similar software such
-  us GMAT, Orekit or STK (as they will be finally selected). 
+  simple task, developers can get used to work with previous software: GMAT,
+  Orekit or STK, building the first layers of the testing application.
 
-* Second month is devoted to validation of reference frames and velocity
+* Workload during the second month is oriented towards the growth and maturity
+  of the framework. Similar software APIs are simplified with new classes and
+  objects which emulate poliastro's main ones: GmatOrbit, OrekitOrbit and
+  StkOrbit might be implement similarly as poliastro's Orbit core class. 
+
+* Third month is devoted to validation of reference frames and velocity
   transformations testing. This is a quite heavy which not only requires
   software knowledge but also a deep research on the topic. Failures or bugs might
   be expected during this big task, that is the reason behind the amount of time
   devoted to it.
+
+* Last month is set as margin in case previous tasks took more time to
+  implement, fixing of critical bugs and other critical and unexpected reasons.
+  Code-coverage can also be implemented directly into poliastro's software.
 
