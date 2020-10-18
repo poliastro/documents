@@ -29,7 +29,7 @@ New validation framework for poliastro
 ------------------------
 
 Design and build a validation framework in order to test and compare poliastro
-against similar software.
+against similar astrodynamics and orbital mechanics software.
 
 
 6 - Description of the proposal
