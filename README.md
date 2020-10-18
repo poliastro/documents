@@ -1,122 +1,140 @@
 The NumFOCUS small development grants program
 =============================================
 
-The NumFOCUS project is an organization who's mission is to promote open
-practices in research, data and scientific computing by providing economical
-support to open-source organizations. This financial help is partially done
-trough its [sustainability
-programs](https://numfocus.org/programs/sustainability). One of the programs,
-the small development grants, calls for proposals three times a year. In
-particular, last round deadline proposal is October 19, 2020.
+1 - Name of the submitter
+---------------------
 
-It is possible for poliastro to apply for this third round. Therefore, a project
-idea needs to be presented together with several objectives to achieve if
-finally selected. Each proposal can obtain up to $5000\$$. This money can be
-used for code and documentation development, website maintenance, workshops
-and others. Only condition is proposed tasks to be completed before 2021
-year. Any person, no matter its nationality or role (student, postdoc...) can
-apply for the proposal once selected.
-
-Resolution of accepted proposals will be announced on 27th, November 2020.
+Jorge Martínez Garrido
 
 
-Project ideas for poliastro project during third round
-======================================================
+2 - E-mail direction
+--------------------
 
-The [poliastro](https://github.com/poliastro/poliastro/) project is a pure
-Python library focused in orbital mechanics computations by providing a simple
-and powerful API. It has successfully participated  in other open-source
-programs such us [Google Summer of Code](https://summerofcode.withgoogle.com/)
-from which new and interesting implementations were merged into main source
-code. [Project's documentation](https://docs.poliastro.space/en/latest/)
-includes more information including [quick
-guides](https://docs.poliastro.space/en/latest/user_guide.html) and a big
-[tutorial gallery](https://docs.poliastro.space/en/latest/gallery.html).
-
-<!-- Add example on AGI polistro usage -->
-Moreover, different companies are using poliastro's routines into their orbital
-mechanics software (orbit elements converters or propagation algorithms). For
-example, IBM is using it in its [IBM Space Tech - Space Situational
-Awareness](https://github.com/IBM/spacetech-ssa) and AGI **TODO**
-
-In the following subsections, several ideas are presented as proposals for the
-small development grants program. Some of them try to continue the actual line
-of implementations of the project while other open new ones.
+jorge@on-orbit.dev
 
 
-Extending Earth capabilities
-----------------------------
+3 - Nature of the software
+--------------------------
 
-At the moment, the project is focused on extending Earth capabilities due to
-the interest increase in small satellites and missions which take place in
-orbits around the planet. As a continuity of the [GSoC'20
-edition](https://summerofcode.withgoogle.com/dashboard/project/6624764354887680/overview/),
-the following features could be developed and included within future version of
-the software:
-
-* Extend `EarthSatellite` attribute and methods: specific maneuvers, minimum
-  altitude variation orbits, rise and set times, close approach analysis...
-
-* Enable poliastro to generate internal orbit objects from TLE. New specific
-  propagators such us SGP4 are required for this task.
-
-* Include more gravitational and atmospheric ones.
-
-* Documentation usage on `EarthSatellite` and tutorials on its usage.
+Affiliated -> Other -> poliastro
 
 
-Validation and testing
-----------------------
+4 - Proposal title
+------------------
 
-Many of the unit tests used by poliastro assume expected results found in
-literature. Although most of those are easy to validate, some other routines
-might be too complex to be found in introductory academical books or manuals,
-imposing the need of alternative testing solutions. 
-
-Different astrodynamics and orbital mechanics softwares are available in the
-market but not all of them are open-source and script based. Among those, three
-possible options arise: [Orekit](https://www.orekit.org/),
-[GMAT](https://sourceforge.net/projects/gmat/) and
-[AGI-STK](https://www.agi.com/products/stk).
-
-Both GMAT and STK show a similar custom script syntax while Orekit recently
-introduced a [Python
-wrapper](https://gitlab.orekit.org/orekit-labs/python-wrapper/-/wikis/installation).
-This API can be used to imitate actual poliastro's `Orbit` objects and test, for
-example, three-dimensional two-body maneuvers. Only disadvantage is that Orekit
-software uses Java as its main programming language being, therefore, not a pure
-Python software.
-
-Different tasks to solve and goals to achieve are listed in the following lines:
-
-* Increase coverage by adding unitary tests to untested conditional
-  sections in the code.
-
-* Build an Okerkit based testing suite.
-
-* Generate STK wrapper or validation API.
+New validation framework for poliastro
 
 
-Three-body problem and N-body simulations
------------------------------------------
+5 - Two-sentence summary
+------------------------
 
-At the moment, poliastro does not have any kind of n-body simulator. Although a
-`threebody/` module exists, it only contains numerical functions focused on
-patched conics and Lagrange points. This proposal would increase the amount of
-features related with N-body simulations, and in particular with the three-body
-problem. The following tasks might become a good starting point:
-
-* Development of N-body integrator.
-
-* Particular solutions, restricted three-body problem.
-
-* Addition of documentation examples.
+Design and build a validation framework in order to test and compare poliastro
+against similar astrodynamics and orbital mechanics software.
 
 
-Timeline for the projects
-=========================
+6 - Description of the proposal
+-------------------------------
 
-If some of previous proposals is finally accepted, it will be announced 27th,
-November. Because estimated time for all projects is 4 months, the NumFOCUS
-program can be concatenated with the beginning of GSOC'21 edition, which ensures
-a continues activity and development inside the poliastro community.
+poliastro is an open source (MIT) collection of Python functions useful in
+Astrodynamics and Orbital Mechanics, focusing on interplanetary applications. It
+provides a simple and intuitive API and handles physical quantities with units.
+
+As it happens with many other scientific packages, it relies on unitary tests to
+ensure accuracy of numerical results. Those expected values come from a variety
+of literature resources: manuals, books, journals, articles... However, some
+routines can not be tested because their complexity is out of the scope of
+academical materials: validation of spacecraft 3-D maneuvers, testing of
+planetary reference frames...
+
+Previous problem can be solved by designing and building a validation framework
+against similar software. This testing environment can lead to an increase
+of numerical accuracy while adding a complete new set of unitary tests for heavy
+astrodynamic routines.
+ 
+Among similar software candidates, we find: GMAT, Orekit and AGI-STK. All of
+them can be used through script files and provide custom API interfaces for
+Python, which makes them ideal for the generation of new test cases and their
+validation against poliastro (which remember is a pure Python package). In
+addition, all of them are free to use and OS-independent except for STK, which
+requires from a Windows based system.
+
+This new validation framework would not be included within actual software but
+in the validation repository of poliastro organization. Nevertheless, some
+results obtained by coded and executed scripts from previously mentioned
+software will be implemented directly into poliastro.
+
+Not only that, by generating a custom testing framework, more complex routines
+could be implemented in a faster and reliable way such us Earth focused
+capabilities, restricted three-body problem, relative motion, halo-orbits,
+low-thrust maneuvers and more!
+
+
+7 - Benefit to project and community
+-------------------------------------
+
+The poliastro project is a well known orbital mechanics software in the
+open-source community because its participation in different congresses and coding
+programs. Each day, more users and companies benefit from its open-source
+nature by building custom applications on top of poliastro's API. However, some
+of them require from high accurate results and cannot afford failure. This
+implies robust testing background cases if poliastro wants to maintain its
+code-quality within the scientific community.
+
+From previous situation different benefits arise to community and the project:
+
+* Users can rely on output computations and expect from those huge accuracy.
+
+* poliastro can increase code-coverage up to 100% and maintain this value for
+  the long term, as a testing framework has been generated. For example, future
+  Earth focused routines or restricted 3-body problem implementations could be
+  easily shipped and tested. 
+
+* Process followed in this program can be adapted to similar scientific
+  packages, so more projects can benefit from its development.
+
+
+8 - Amount requested
+--------------------
+
+Total amount requested: 3000$
+
+
+9 - Budget justification
+------------------------
+
+The project, as depicted in the "Timeline" section of this proposal, is expected
+to be completed within 4 months, from December'20 till the end of March'21.  The
+grant will be used as student stipend, which is expected to assume a workload
+of:
+
+3000$ = 4 [month] * 30 [day / month] *  2.5 * [hour / day] * 10.00 [$ / hour] 
+
+
+10 - Timeline of deliverable
+-----------------------------
+
+* The first two weeks are devoted to the collection and design of the validation
+  framework from the theoretical point of view. The project is expected to start
+  either with Orekit or STK, being this last one the most preferred because of
+  its importance in the industry.
+
+* Once the framework has been theoretically defined, the rest of first month is
+  devoted to the validation and testing of 3D maneuvers. By starting with this
+  simple task, developers can get used to work with previous software: GMAT,
+  Orekit or STK, building the first layers of the testing application.
+
+* Workload during the second month is oriented towards the growth and maturity
+  of the framework. Similar software APIs are simplified with new classes and
+  objects which emulate poliastro's main ones: GmatOrbit, OrekitOrbit and
+  StkOrbit might be implement similarly as poliastro's Orbit core class. 
+
+* Third month is devoted to validation of reference frames and velocity
+  transformations testing. This is a quite heavy which not only requires
+  software knowledge but also a deep research on the topic. Failures or bugs might
+  be expected during this big task, that is the reason behind the amount of time
+  devoted to it.
+
+* Last month is set as margin in case previous tasks took more time to
+  implement, fixing of critical bugs and other critical and unexpected reasons.
+  Code-coverage can also be implemented directly into poliastro's software.
+
