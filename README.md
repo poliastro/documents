@@ -107,7 +107,7 @@ to be completed within 4 months, from December'20 until the end of March'21. The
 grant will be used as student stipend, which is expected to assume a workload
 of:
 
-3000$ = 4 [month] * 30 [day / month] *  2.5 * [hour / day] * 10.00 [$ / hour] 
+3000 USD = 16 [weeks] * 12.5 * [hour / week] * 15.00 [USD / hour]
 
 
 10 - Timeline of deliverable
