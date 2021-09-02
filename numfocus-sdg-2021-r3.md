@@ -46,7 +46,7 @@ XXX
 8 - Amount requested
 --------------------
 
-Total amount requested: 5000$
+Total amount requested: 5k USD
 
 
 9 - Budget justification
@@ -54,7 +54,7 @@ Total amount requested: 5000$
 
 XXX
 
-`500$ == 100 * [hours] * 50.00 [$ / hour]`
+`5k USD == 100 * [hours] * 50.00 [USD / hour]`
 
 
 10 - Timeline of deliverable
