@@ -34,10 +34,9 @@ At the moment, while excellent for individual computations, `poliastro` does not
 6 - Description of the proposal
 -------------------------------
 
-`poliastro` is an open source (MIT) collection of Python functions useful in
-astrodynamics and orbital mechanics, focusing on interplanetary applications. It provides a simple and intuitive API and handles physical quantities with units.
+`poliastro` is an open source (MIT) pure Python library for interactive Astrodynamics and Orbital Mechanics, with a focus on ease of use, speed, and quick visualization. It provides a simple and intuitive API, and handles physical quantities with units.
 
-In its current state, next to other closely related features, `poliastro` provides a [broad range of methods or algorithms](https://docs.poliastro.space/en/stable/quickstart.html) for propagating orbits, studying perturbations, working with thrust and computing transfers. Similar to other open source software in this domain, `poliastro` focuses on individual solutions, e.g. the propagation of one individual orbit to one individual point in time. To be clear, until recently, this was exactly what was needed by the majority of professionals and students alike in the fields of astrodynamics and mission design.
+In its current state, next to other closely related features, `poliastro` provides a [broad range of methods or algorithms](https://docs.poliastro.space/en/stable/quickstart.html) for propagating orbits, studying perturbations, studying spacecraft maneuvers and computing transfers. Similar to other open source software in this domain, `poliastro` focuses on individual solutions, e.g. the propagation of one individual orbit to one individual point in time. Until recently, this was good enough for the majority of professionals and students alike in the fields of astrodynamics and mission design.
 
 A lot of contemporary research, however, has began to require a lot of computations of this kind at once. As a simple example, instead of plotting an individual orbit, a potential user may want to plot a large quantity of orbits at once. On a related subject, so called "[porkchop plots](https://docs.poliastro.space/en/stable/examples/Porkchops%20with%20poliastro.html)", a tool common in space mission design, require the computation of many transfers. Taking this one step further, a potential user may require a large quantity of porkchop plots or their underlying data for analysis at once.
 
@@ -77,12 +76,12 @@ The proposed work is expected to require 100 working hours.
 `5k USD == 100 * [hours] * 50.00 [USD / hour]`
 
 
-10 - Timeline of deliverable
+10 - Timeline of deliverables
 -----------------------------
 
 The work will be carried out in a constant dialogue with `poliastro` developers across a time-span of four months, from October 2021 to January 2022.
 
-The following deliberatives are covered (with their estimated percentage of required work hours):
+The following deliverables are covered (with their estimated percentage of required work hours):
 
 * 50%: Re-factoring of existing internal infrastructure.
 * 15%: Adding at least one array-like data type to the library, resembling existing ones: from the `Orbit` class to an "Orbit array" class.
