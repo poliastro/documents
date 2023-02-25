@@ -117,7 +117,7 @@ and the project would be completed by the end of September 2023.
 The grant is used as hourly rates and number of work hours for contractors. The
 requested budget is justified as follows:
 
-4500$ = 5 [month] * 15 [day / month] *  3 * [hour / day] * 20.00 [$ / hour] 
+4500$ = 5 [month] * 15 [day / month] *  3 [hour / day] * 20.00 [$ / hour] 
 
 
 10 - Timeline of deliverable
