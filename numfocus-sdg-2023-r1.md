@@ -35,9 +35,10 @@ provide plotting animation capabilities to poliastro.
 6 - Description of the proposal
 -------------------------------
 
-poliastro is an open source (MIT) collection of Python functions useful in
-Astrodynamics and Orbital Mechanics, focusing on interplanetary applications. It
-provides a simple and intuitive API and handles physical quantities with units.
+poliastro is an open source (MIT) pure Python library for interactive
+Astrodynamics and Orbital Mechanics, with a focus on ease of use, speed, and
+quick visualization. It provides a simple and intuitive API, and handles
+physical quantities with units.
 
 Visualizing astronomical objects together with their path and motion is a key
 feature of any Astrodynamics library, including poliastro.
