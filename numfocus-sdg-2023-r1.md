@@ -59,7 +59,7 @@ Jupyter notebook whereas PyVista can also be executed locally in a dedicated
 window, alleviating the number of dependencies. PyVista also integrates with
 various graphic user interfaces frameworks such us PyQT and PySide.
 
-Another desired feature in poliastro is animating plots. This feature becomes
+Another desired feature in poliastro is animated plots. This feature becomes
 essential when simulating the evolution of a system. With animated plots, users
 would be able to have better understanding on how the system evolves over time.
 
