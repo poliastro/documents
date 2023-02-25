@@ -44,13 +44,20 @@ Visualizing astronomical objects together with their path and motion is a key
 feature of any Astrodynamics library, including poliastro.
 
 At the moment, poliastro supports two backends built on top of the Matplotlib
-library and the Plotly library. However, these libraries are not conceived for
-three-dimensional visualization and become a limitation when requiring complex
-visualization techniques like using textures.
+library and the Plotly library. Although these libraries provide support for
+three-dimensional visualization, their capabilities are limitied. For example,
+texturing or lightning are not supported.
 
 A solution proposed during the SciPy 2022 conference was to create a new backend
 based on PyVista. This library provides a Pythonic high-level API to The
 Visualization Toolkit (VTK) library.
+
+Cesium was also considered for precise visualization. However, this software
+only supports the Earth as the main attractor. The reason is that Cesium focuses
+on geospatial activities. In addition, Cesium requires from a web interface or
+Jupyter notebook whereas PyVista can also be executed locally in a dedicated
+window, alleviating the number of dependencies. PyVista also integrates with
+various graphic user interfaces frameworks such us PyQT and PySide.
 
 Another desired feature in poliastro is animating plots. This feature becomes
 essential when simulating the evolution of a system. With animated plots, users
